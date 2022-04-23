@@ -129,3 +129,53 @@ else {
     console.log('Just a regular number');
 }
 ```
+
+Week 2
+
+Tuesday
+
+1. Multiply exercise
+  
+  function multiply(a, b){
+ return a * b
+}
+
+2.ASCII Total exercise
+
+
+function uniTotal(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    count += str.charCodeAt(i);
+  }
+  return count;
+}
+
+3.Char From ASCII Value exercise
+
+function getChar(c){
+return String.fromCharCode(c);
+}
+
+4.Binary Addition exercise
+
+function addBinary(a,b) {
+let sum = a + b;
+  return sum.toString(2);
+}
+
+5.Student's Final Grade exercise
+
+function finalGrade(exam, projects) {
+  let total = 0;
+  if (exam > 90 || projects > 10) {
+  total = 100;
+} else if (exam > 75 && projects >= 5) {
+  total = 90;
+} else if (exam > 50 && projects >= 2) {
+  total = 75;
+} else {
+  total = 0;
+}
+  return total;
+}
