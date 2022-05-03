@@ -182,7 +182,11 @@ function finalGrade(exam, projects) {
 
 
 Wednesday 20/04
+
+
 1. Holiday VIII - Duty Free exercise
+
+
 function dutyFree(normPrice, discount, hol){
 let descuentoTotal = normPrice*(discount/100);
   return Math.floor (hol/descuentoTotal);
@@ -190,13 +194,17 @@ let descuentoTotal = normPrice*(discount/100);
 
 
 2. Twice As Old exercise
-function twiceAsOld(dadYearsOld, sonYearsOld) { n
-  let dobAgeSon = 2*sonYearsOld;
-  return Math.abs(dadYearsOld - dobAgeSon);
+
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let difference = ((dadYearsOld - sonYearsOld) * 2) - dadYearsOld;
+  return Math.abs(difference);
 }
 
 
 3. Valid Spacing Exercise
+
+
 function validSpacing(s) {
   if (s.length === 0) return true;
   if (s[0] === ' ' || s[s.length - 1] === ' ') return false;
@@ -381,7 +389,7 @@ decodeMorse = function(morseCode){
 
 
 Wednesday
-14:06
+
 1. Valid Parentheses exercise
 function validParentheses(parens) {
   let openNum = 0;
@@ -407,22 +415,31 @@ function validParentheses(parens) {
 2. Convert String To Camel Case
 function toCamelCase(str){
   let strArray;
+  
+  
   if (str === ""){
-    return "";
+    return "";    
   }
+  
   if (str.indexOf("-") !== -1){
     strArray = str.split("-")
   } else {
     strArray = str.split("_")
   }
+  
   let ccString = strArray[0];
-  for (let i = 0; i < strArray.length; i++){
-    ccString += capitalize(strArray[i]);
+  
+  for (let i = 1; i < strArray.length; i++){
+    ccString += capitalize(strArray[i]);           
   }
+  
   return ccString
+  
   }
+    
   let capitalize = (str) => {
     return str[0].toUpperCase() + str.slice(1);
+    
 }
 
 
@@ -448,6 +465,11 @@ function foldArray(array, runs) {
   while (c.length) r.push(c.pop() + (c.shift() || 0));
   return runs - 1 ? foldArray(r, runs - 1) : r;
 }
+
+
+
+
+
 2. Encrypt This! exercise*
 var encryptThis = function(str) {
  if(str === '') {return '';
